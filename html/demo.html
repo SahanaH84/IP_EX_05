@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        margin: auto;
+        margin-top: 7%;
+      }
+      table {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: large;
+      }
+      fieldset {
+        border-color: blue;
+        border-radius: 20px;
+      }
+      legend {
+        font-size: x-large;
+        color: blue;
+      }
+      tr {
+        height: 40px;
+      }
+      div {
+        margin-left: 80%;
+      }
+    </style>
+    <script src="demo.js"></script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Employee details</legend>
+        <table>
+          <tr>
+            <td>Employee Id:</td>
+            <td>
+              <input
+                type="text"
+                id="eid"
+                placeholder=" first name  last name"
+                onkeyup="id_valid()"
+              />
+              <span id="iderror"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Employee Name:</td>
+            <td>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter  name"
+                onkeyup="name_valid()"
+              />
+              <span id="name_error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Dob:</td>
+            <td><input type="date" required /></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type="radio" name="gender" />Male<input
+                type="radio"
+                name="gender"
+              />Female
+            </td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td>
+              <input
+                type="text"
+                id="eage"
+                placeholder="Age is calculated from dob"
+                onkeyup="age_valid()"
+              />
+              <span id="ageerror"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td>
+              <textarea
+                id="ead"
+                placeholder="Enter your address"
+                onkeyup="add_valid()"
+              ></textarea>
+              <span id="aderror"></span>
+              <span id="adcrt"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Qualification:</td>
+            <td>
+              <select>
+                <option>BE</option>
+                <option>ME</option>
+                <option>BTech</option>
+                <option>MTech</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Contact Number:</td>
+            <td>
+              <input group="text" id="contact" onkeyup="contact_valid()" />
+              <span id="contacterror"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Area of Interest:</td>
+            <td>
+              <input group="text" id="INTEREST" onkeyup="int_valid()" />
+              <span id="INTERESTerror"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Year of experience:</td>
+            <td>
+              <input group="text" id="EXP" onkeyup="exp_valid()" />
+              <span id="yerror"></span>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <div>
+        <button onclick="submit_valid()">Submit</button>
+        <button onclick="clear()">Clear</button>
+      </div>
+    </form>
+  </body>
+</html>
